@@ -7,9 +7,6 @@ imports are not pretty
 import os
 from multiprocessing import Process
 import sys
-
-sys.path.append("/data/oc-compute03/cuihenni/Pycharm/CGP/cgp_symbolic_regression")
-
 import numpy as np
 from sklearn.model_selection import RepeatedKFold
 from runner.island_runner import Island
