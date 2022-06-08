@@ -56,13 +56,13 @@ class Island:
     def get_current_fitness_value(self):
         return self.current_best_fitness_value
 
-    def _calc_fitness(self, inputs, target):
+    def _calc_fitness(self, inputs, target, eval_mode=False):
         loss_dict = {}
         # iterate for every chromosome
         for i, chromosome in enumerate(self.chromosomes):
             # after the first iteration, this list should contain all fitness values of the previous iteration
             # as the parent has not changed, do not evaluate it again as the fitness value will stay the same
-            if self.current_fitness_values:
+            if self.current_fitness_values and not eval_mode:
                 if i == self.parent_id:
                     loss_dict[i] = self.current_fitness_values[i]
                     continue
@@ -82,7 +82,7 @@ class Island:
         return loss_dict
 
     def eval(self):
-        chromosome_mse = self._calc_fitness(self.test_data, self.test_label)
+        chromosome_mse = self._calc_fitness(self.test_data, self.test_label, eval_mode=True)
         min_value = min(chromosome_mse.values())
 
         return min_value
