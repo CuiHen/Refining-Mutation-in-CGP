@@ -102,7 +102,7 @@ class Node:
         """
         while True:
             random_number = random.randint(lower_limit, upper_limit)
-            if random_number != excluded:
+            if random_number != excluded or excluded <= 1:
                 break
 
         return random_number
