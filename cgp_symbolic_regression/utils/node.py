@@ -100,9 +100,13 @@ class Node:
         :param excluded:
         :return:
         """
+        if lower_limit == upper_limit:
+            return lower_limit
+
         while True:
             random_number = random.randint(lower_limit, upper_limit)
-            if random_number != excluded or excluded <= 1:
+            # if excluded too small,
+            if random_number != excluded:
                 break
 
         return random_number
