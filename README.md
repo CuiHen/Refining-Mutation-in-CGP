@@ -1,6 +1,5 @@
 # Refining-Mutation-in-CGP
-
-TODO better readme and refactoring the code
+From: ![Static Badge](https://img.shields.io/badge/https%3A%2F%2Fdoi.org%2F10.1007%2F978--3--031--21094--5__14-https%3A%2F%2Fdoi.org%2F10.1007%2F978--3--031--21094--5__14-blue?label=DOI&link=https%3A%2F%2Fdoi.org%2F10.1007%2F978-3-031-21094-5_14)
 
 # Installation and Running the Code
 Please install the packages listed in the requirements.txt and download the datasets from the UCI Repository (https://archive.ics.uci.edu/ml/index.php). Download links are also mentioned in the corresponding folders.
